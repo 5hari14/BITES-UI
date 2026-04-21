@@ -1,0 +1,5 @@
+Finding: The lightbox now renders the image correctly (visible, centered, with navigation arrows and info text).
+However, it uses createPortal to document.body which makes it cover the ENTIRE browser viewport, not just the phone frame.
+This is actually fine for a mobile app mockup - it simulates a fullscreen photo viewer.
+But ideally it should be constrained to the phone frame.
+The fix would be to portal to the phone frame container instead of document.body.

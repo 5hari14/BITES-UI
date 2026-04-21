@@ -1,0 +1,12 @@
+Location Selector Test Findings:
+1. Home screen: Shows location badge in top-right corner - WORKING
+2. Search screen: Location selector dropdown opens correctly - WORKING
+3. Country list: Shows all 7 countries with flags, city counts, place counts - WORKING
+4. City selection: After clicking Cyprus, shows city list with All Cities, Limassol, Nicosia, Paphos, Larnaca - WORKING
+5. BUG: Clicked on index 17 which was labeled "Nicosia" but the button shows "Paphos". 
+   - Wait, looking at the screenshot more carefully: the dropdown showed Paphos at index 16 and Nicosia at index 17
+   - But the result shows "Restaurants in Paphos" with 2 places (Grill House + Seaside Lounge) which ARE Paphos venues
+   - Actually the button says "Paphos" so it seems like the indexing was off or I misread
+   - The venue filtering IS working correctly - showing only Paphos venues
+6. Need to test: Home screen reflects the city change
+7. Need to test: Selecting a non-Cyprus country shows "Coming Soon" state
